@@ -1,0 +1,30 @@
+method           DnR recursive + growing tree + stride-2
+selection        D&R (learned)
+memory budget    64 tokens
+candidate pool   16384 tokens
+checkpoint       80000
+seed             7
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 25        50      50.0
+Counting     PickXtimes              41        50      82.0
+Counting     SwingXtimes             50        50     100.0
+Counting     StopCube                21        50      42.0
+Permanence   VideoUnmask             15        50      30.0
+Permanence   ButtonUnmask            16        50      32.0
+Permanence   VideoUnmaskSwap         12        50      24.0
+Permanence   ButtonUnmaskSwap         1        50       2.0
+Reference    PickHighlight           17        50      34.0
+Reference    VideoRepick             14        50      28.0
+Reference    VideoPlaceButton        36        50      72.0
+Reference    VideoPlaceOrder         35        50      70.0
+Imitation    MoveCube                48        50      96.0
+Imitation    InsertPeg                7        50      14.0
+Imitation    PatternLock             28        50      56.0
+Imitation    RouteStick              41        50      82.0
+
+suite mean   Counting               137       200     68.50
+suite mean   Permanence              44       200     22.00
+suite mean   Reference              102       200     51.00
+suite mean   Imitation              124       200     62.00
+average      16 tasks               407       800     50.88

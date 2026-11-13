@@ -1,0 +1,33 @@
+method           DnR recursive (w-o parameter sharing)
+selection        D&R (learned)
+memory budget    64 tokens
+candidate pool   512 tokens
+cells            9 = checkpoints 80000, 90000, 99999 x seeds 0, 7, 42 (the ckpt*_seed*.text files of this folder)
+statistics       mean, population standard deviation (std), and sample standard deviation (std n-1) over the 9 cells; success rate in %; PDF printed +/- compared with std n-1; displayed values rounded to 2 decimals using ROUND_HALF_UP
+success rate     computed from the unchanged per-task rate records; success/episode counts verified where present; no paper values substituted for observed data
+
+suite        task                   mean     std  std n-1
+Counting     BinFill                 38.44    4.60     4.88
+Counting     PickXtimes              83.33    4.32     4.58
+Counting     SwingXtimes             94.67    2.49     2.65
+Counting     StopCube                22.00    3.53     3.74
+Permanence   VideoUnmask             33.11    2.51     2.67
+Permanence   ButtonUnmask            27.78    2.90     3.07
+Permanence   VideoUnmaskSwap         25.33    3.53     3.74
+Permanence   ButtonUnmaskSwap        19.78    4.26     4.52
+Reference    PickHighlight           19.56    3.50     3.71
+Reference    VideoRepick             23.11    2.69     2.85
+Reference    VideoPlaceButton        34.22    2.74     2.91
+Reference    VideoPlaceOrder         30.44    4.50     4.77
+Imitation    MoveCube                59.78    2.90     3.07
+Imitation    InsertPeg                2.22    2.57     2.73
+Imitation    PatternLock             22.67    2.83     3.00
+Imitation    RouteStick              24.44    5.23     5.55
+
+suite mean   Counting                59.61    1.63     1.73
+suite mean   Permanence              26.50    2.13     2.26
+suite mean   Reference               26.83    1.70     1.80
+suite mean   Imitation               27.28    1.42     1.50
+average      16 tasks                35.06    0.85     0.90
+
+summary          9/9 cells, 16/16 tasks per cell; checkpoint averages 80000 34.13, 90000 35.50, 99999 35.54; seed averages 0 35.67, 7 34.67, 42 34.83

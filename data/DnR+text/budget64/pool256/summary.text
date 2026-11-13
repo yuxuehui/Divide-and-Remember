@@ -1,0 +1,33 @@
+method           DnR+text
+selection        D&R (learned)
+memory budget    64 tokens
+candidate pool   256 tokens
+cells            9 = checkpoints 80000, 90000, 99999 x seeds 0, 7, 42 (the ckpt*_seed*.text files of this folder)
+statistics       mean, population standard deviation (std), and sample standard deviation (std n-1) over the 9 cells; success rate in %; PDF printed +/- compared with std n-1; displayed values rounded to 2 decimals using ROUND_HALF_UP
+success rate     computed from the unchanged per-task rate records; success/episode counts verified where present; no paper values substituted for observed data
+
+suite        task                   mean     std  std n-1
+Counting     BinFill                 38.44    2.95     3.13
+Counting     PickXtimes              68.89    8.60     9.12
+Counting     SwingXtimes             83.78    6.76     7.17
+Counting     StopCube                16.89    4.01     4.26
+Permanence   VideoUnmask             34.00    3.27     3.46
+Permanence   ButtonUnmask            19.78    5.77     6.12
+Permanence   VideoUnmaskSwap         22.67    3.13     3.32
+Permanence   ButtonUnmaskSwap        11.33    6.32     6.71
+Reference    PickHighlight           16.22    4.57     4.84
+Reference    VideoRepick             21.11    4.01     4.26
+Reference    VideoPlaceButton        32.22    3.94     4.18
+Reference    VideoPlaceOrder         22.89    5.74     6.09
+Imitation    MoveCube                50.89    6.33     6.72
+Imitation    InsertPeg                1.11    0.99     1.05
+Imitation    PatternLock             20.22    4.66     4.94
+Imitation    RouteStick              24.67    4.62     4.90
+
+suite mean   Counting                52.00    2.31     2.45
+suite mean   Permanence              21.94    3.51     3.72
+suite mean   Reference               23.11    2.02     2.15
+suite mean   Imitation               24.22    3.15     3.35
+average      16 tasks                30.32    1.54     1.64
+
+summary          9/9 cells, 16/16 tasks per cell; checkpoint averages 80000 32.04, 90000 29.13, 99999 29.79; seed averages 0 29.63, 7 31.00, 42 30.33

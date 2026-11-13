@@ -1,0 +1,30 @@
+method           TokenDrop
+selection        not specified in source record
+memory budget    64 tokens
+candidate pool   none
+checkpoint       80000
+seed             0
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 12        50      24.0
+Counting     PickXtimes              25        50      50.0
+Counting     SwingXtimes             19        50      38.0
+Counting     StopCube                 0        50       0.0
+Permanence   VideoUnmask             13        50      26.0
+Permanence   ButtonUnmask            10        50      20.0
+Permanence   VideoUnmaskSwap          9        50      18.0
+Permanence   ButtonUnmaskSwap         5        50      10.0
+Reference    PickHighlight            8        50      16.0
+Reference    VideoRepick              0        50       0.0
+Reference    VideoPlaceButton        14        50      28.0
+Reference    VideoPlaceOrder         12        50      24.0
+Imitation    MoveCube                13        50      26.0
+Imitation    InsertPeg                0        50       0.0
+Imitation    PatternLock              6        50      12.0
+Imitation    RouteStick               5        50      10.0
+
+suite mean   Counting                56       200     28.00
+suite mean   Permanence              37       200     18.50
+suite mean   Reference               34       200     17.00
+suite mean   Imitation               24       200     12.00
+average      16 tasks               151       800     18.88

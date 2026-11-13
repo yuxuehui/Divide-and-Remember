@@ -1,0 +1,30 @@
+method           HAMLET
+selection        not specified in source record
+memory budget    64 tokens
+candidate pool   none
+checkpoint       99999
+seed             7
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 18        50      36.0
+Counting     PickXtimes              41        50      82.0
+Counting     SwingXtimes             43        50      86.0
+Counting     StopCube                22        50      44.0
+Permanence   VideoUnmask             15        50      30.0
+Permanence   ButtonUnmask            13        50      26.0
+Permanence   VideoUnmaskSwap         12        50      24.0
+Permanence   ButtonUnmaskSwap        10        50      20.0
+Reference    PickHighlight           14        50      28.0
+Reference    VideoRepick             10        50      20.0
+Reference    VideoPlaceButton        16        50      32.0
+Reference    VideoPlaceOrder         12        50      24.0
+Imitation    MoveCube                31        50      62.0
+Imitation    InsertPeg                0        50       0.0
+Imitation    PatternLock              3        50       6.0
+Imitation    RouteStick               4        50       8.0
+
+suite mean   Counting               124       200     62.00
+suite mean   Permanence              50       200     25.00
+suite mean   Reference               52       200     26.00
+suite mean   Imitation               38       200     19.00
+average      16 tasks               264       800     33.00

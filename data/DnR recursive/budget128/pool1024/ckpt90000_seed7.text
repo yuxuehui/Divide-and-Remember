@@ -1,0 +1,30 @@
+method           DnR recursive
+selection        D&R (learned)
+memory budget    128 tokens
+candidate pool   1024 tokens
+checkpoint       90000
+seed             7
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 32        50      64.0
+Counting     PickXtimes              48        50      96.0
+Counting     SwingXtimes             45        50      90.0
+Counting     StopCube                33        50      66.0
+Permanence   VideoUnmask             13        50      26.0
+Permanence   ButtonUnmask            10        50      20.0
+Permanence   VideoUnmaskSwap          9        50      18.0
+Permanence   ButtonUnmaskSwap         7        50      14.0
+Reference    PickHighlight           13        50      26.0
+Reference    VideoRepick             29        50      58.0
+Reference    VideoPlaceButton        42        50      84.0
+Reference    VideoPlaceOrder         38        50      76.0
+Imitation    MoveCube                45        50      90.0
+Imitation    InsertPeg                9        50      18.0
+Imitation    PatternLock             32        50      64.0
+Imitation    RouteStick              41        50      82.0
+
+suite mean   Counting               158       200     79.00
+suite mean   Permanence              39       200     19.50
+suite mean   Reference              122       200     61.00
+suite mean   Imitation              127       200     63.50
+average      16 tasks               446       800     55.75

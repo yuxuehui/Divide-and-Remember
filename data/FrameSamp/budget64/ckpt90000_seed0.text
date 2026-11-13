@@ -1,0 +1,30 @@
+method           FrameSamp
+selection        Fixed rule (no learning)
+memory budget    64 tokens
+candidate pool   none
+checkpoint       90000
+seed             0
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 20        50      40.0
+Counting     PickXtimes              32        50      64.0
+Counting     SwingXtimes             46        50      92.0
+Counting     StopCube                 9        50      18.0
+Permanence   VideoUnmask             16        50      32.0
+Permanence   ButtonUnmask             0        50       0.0
+Permanence   VideoUnmaskSwap         12        50      24.0
+Permanence   ButtonUnmaskSwap         0        50       0.0
+Reference    PickHighlight           14        50      28.0
+Reference    VideoRepick              8        50      16.0
+Reference    VideoPlaceButton        15        50      30.0
+Reference    VideoPlaceOrder          6        50      12.0
+Imitation    MoveCube                26        50      52.0
+Imitation    InsertPeg                1        50       2.0
+Imitation    PatternLock              6        50      12.0
+Imitation    RouteStick              11        50      22.0
+
+suite mean   Counting               107       200     53.50
+suite mean   Permanence              28       200     14.00
+suite mean   Reference               43       200     21.50
+suite mean   Imitation               44       200     22.00
+average      16 tasks               222       800     27.75

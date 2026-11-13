@@ -1,0 +1,30 @@
+method           Uniform (indices 13, 14)
+selection        Fixed rule (no learning)
+memory budget    64 tokens
+candidate pool   512 tokens
+checkpoint       80000
+seed             0
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 15        50      30.0
+Counting     PickXtimes              25        50      50.0
+Counting     SwingXtimes             37        50      74.0
+Counting     StopCube                 0        50       0.0
+Permanence   VideoUnmask             14        50      28.0
+Permanence   ButtonUnmask            12        50      24.0
+Permanence   VideoUnmaskSwap         11        50      22.0
+Permanence   ButtonUnmaskSwap         1        50       2.0
+Reference    PickHighlight           11        50      22.0
+Reference    VideoRepick             11        50      22.0
+Reference    VideoPlaceButton        27        50      54.0
+Reference    VideoPlaceOrder         19        50      38.0
+Imitation    MoveCube                 9        50      18.0
+Imitation    InsertPeg                2        50       4.0
+Imitation    PatternLock              7        50      14.0
+Imitation    RouteStick              16        50      32.0
+
+suite mean   Counting                77       200     38.50
+suite mean   Permanence              38       200     19.00
+suite mean   Reference               68       200     34.00
+suite mean   Imitation               34       200     17.00
+average      16 tasks               217       800     27.12

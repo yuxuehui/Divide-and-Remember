@@ -1,0 +1,30 @@
+method           Random
+selection        Fixed rule (no learning)
+memory budget    64 tokens
+candidate pool   512 tokens
+checkpoint       80000
+seed             42
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 13        50      26.0
+Counting     PickXtimes              20        50      40.0
+Counting     SwingXtimes             37        50      74.0
+Counting     StopCube                 4        50       8.0
+Permanence   VideoUnmask             13        50      26.0
+Permanence   ButtonUnmask            12        50      24.0
+Permanence   VideoUnmaskSwap         13        50      26.0
+Permanence   ButtonUnmaskSwap         6        50      12.0
+Reference    PickHighlight           11        50      22.0
+Reference    VideoRepick             10        50      20.0
+Reference    VideoPlaceButton        20        50      40.0
+Reference    VideoPlaceOrder         17        50      34.0
+Imitation    MoveCube                10        50      20.0
+Imitation    InsertPeg                1        50       2.0
+Imitation    PatternLock             12        50      24.0
+Imitation    RouteStick              17        50      34.0
+
+suite mean   Counting                74       200     37.00
+suite mean   Permanence              44       200     22.00
+suite mean   Reference               58       200     29.00
+suite mean   Imitation               40       200     20.00
+average      16 tasks               216       800     27.00

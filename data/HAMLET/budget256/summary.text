@@ -1,0 +1,33 @@
+method           HAMLET
+selection        not specified in source record
+memory budget    256 tokens
+candidate pool   none
+cells            9 = checkpoints 80000, 90000, 99999 x seeds 0, 7, 42 (the ckpt*_seed*.text files of this folder)
+statistics       mean, population standard deviation (std), and sample standard deviation (std n-1) over the 9 cells; success rate in %; PDF printed +/- compared with std n-1; displayed values rounded to 2 decimals using ROUND_HALF_UP
+success rate     computed from the unchanged per-task rate records; success/episode counts verified where present; no paper values substituted for observed data
+
+suite        task                   mean     std  std n-1
+Counting     BinFill                 29.56    3.37     3.57
+Counting     PickXtimes              86.44    3.86     4.10
+Counting     SwingXtimes             87.33    4.32     4.58
+Counting     StopCube                59.78    3.19     3.38
+Permanence   VideoUnmask             28.44    2.63     2.79
+Permanence   ButtonUnmask            23.78    3.46     3.67
+Permanence   VideoUnmaskSwap         25.11    2.33     2.47
+Permanence   ButtonUnmaskSwap        19.78    4.47     4.74
+Reference    PickHighlight           20.67    4.00     4.24
+Reference    VideoRepick             26.67    2.11     2.24
+Reference    VideoPlaceButton        36.89    4.82     5.11
+Reference    VideoPlaceOrder         26.22    5.77     6.12
+Imitation    MoveCube                74.89    6.74     7.15
+Imitation    InsertPeg                5.78    3.82     4.06
+Imitation    PatternLock             12.00    2.11     2.24
+Imitation    RouteStick              19.56    3.50     3.71
+
+suite mean   Counting                65.78    2.47     2.62
+suite mean   Permanence              24.28    1.08     1.15
+suite mean   Reference               27.61    2.37     2.51
+suite mean   Imitation               28.06    1.98     2.10
+average      16 tasks                36.43    1.31     1.39
+
+summary          9/9 cells, 16/16 tasks per cell; checkpoint averages 80000 35.79, 90000 37.29, 99999 36.21; seed averages 0 36.88, 7 35.92, 42 36.50

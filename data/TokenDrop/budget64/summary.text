@@ -1,0 +1,33 @@
+method           TokenDrop
+selection        not specified in source record
+memory budget    64 tokens
+candidate pool   none
+cells            9 = checkpoints 80000, 90000, 99999 x seeds 0, 7, 42 (the ckpt*_seed*.text files of this folder)
+statistics       mean, population standard deviation (std), and sample standard deviation (std n-1) over the 9 cells; success rate in %; PDF printed +/- compared with std n-1; displayed values rounded to 2 decimals using ROUND_HALF_UP
+success rate     computed from the unchanged per-task rate records; success/episode counts verified where present; no paper values substituted for observed data
+
+suite        task                   mean     std  std n-1
+Counting     BinFill                 27.78    4.05     4.29
+Counting     PickXtimes              39.78    6.43     6.82
+Counting     SwingXtimes             36.67    5.25     5.57
+Counting     StopCube                 5.78    5.03     5.33
+Permanence   VideoUnmask             28.67    2.67     2.83
+Permanence   ButtonUnmask            16.67    6.11     6.48
+Permanence   VideoUnmaskSwap         16.67    3.40     3.61
+Permanence   ButtonUnmaskSwap         6.44    4.40     4.67
+Reference    PickHighlight           14.00    3.53     3.74
+Reference    VideoRepick              1.56    1.26     1.33
+Reference    VideoPlaceButton        26.67    2.83     3.00
+Reference    VideoPlaceOrder         19.56    4.09     4.33
+Imitation    MoveCube                24.44    4.30     4.56
+Imitation    InsertPeg                2.44    2.06     2.19
+Imitation    PatternLock              9.56    2.79     2.96
+Imitation    RouteStick               8.89    2.85     3.02
+
+suite mean   Counting                27.50    1.84     1.95
+suite mean   Permanence              17.11    2.51     2.67
+suite mean   Reference               15.44    1.71     1.81
+suite mean   Imitation               11.33    0.67     0.71
+average      16 tasks                17.85    0.90     0.96
+
+summary          9/9 cells, 16/16 tasks per cell; checkpoint averages 80000 18.58, 90000 17.50, 99999 17.46; seed averages 0 17.92, 7 16.96, 42 18.67

@@ -1,0 +1,30 @@
+method           TTT
+selection        not specified in source record
+memory budget    64 tokens
+candidate pool   none
+checkpoint       90000
+seed             0
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 16        50      32.0
+Counting     PickXtimes              23        50      46.0
+Counting     SwingXtimes             18        50      36.0
+Counting     StopCube                 3        50       6.0
+Permanence   VideoUnmask             12        50      24.0
+Permanence   ButtonUnmask             6        50      12.0
+Permanence   VideoUnmaskSwap         10        50      20.0
+Permanence   ButtonUnmaskSwap         1        50       2.0
+Reference    PickHighlight            8        50      16.0
+Reference    VideoRepick              3        50       6.0
+Reference    VideoPlaceButton        15        50      30.0
+Reference    VideoPlaceOrder          8        50      16.0
+Imitation    MoveCube                10        50      20.0
+Imitation    InsertPeg                0        50       0.0
+Imitation    PatternLock              4        50       8.0
+Imitation    RouteStick               4        50       8.0
+
+suite mean   Counting                60       200     30.00
+suite mean   Permanence              29       200     14.50
+suite mean   Reference               34       200     17.00
+suite mean   Imitation               18       200      9.00
+average      16 tasks               141       800     17.62
