@@ -1,0 +1,30 @@
+method           RB-VLA
+selection        not specified in source record
+memory budget    512 tokens
+candidate pool   none
+checkpoint       90000
+seed             7
+
+suite        task               success  episodes  rate (%)
+Counting     BinFill                 21        50      42.0
+Counting     PickXtimes              37        50      74.0
+Counting     SwingXtimes             41        50      82.0
+Counting     StopCube                 3        50       6.0
+Permanence   VideoUnmask             14        50      28.0
+Permanence   ButtonUnmask            10        50      20.0
+Permanence   VideoUnmaskSwap         10        50      20.0
+Permanence   ButtonUnmaskSwap        11        50      22.0
+Reference    PickHighlight           11        50      22.0
+Reference    VideoRepick             13        50      26.0
+Reference    VideoPlaceButton        11        50      22.0
+Reference    VideoPlaceOrder         13        50      26.0
+Imitation    MoveCube                20        50      40.0
+Imitation    InsertPeg                1        50       2.0
+Imitation    PatternLock              7        50      14.0
+Imitation    RouteStick               3        50       6.0
+
+suite mean   Counting               102       200     51.00
+suite mean   Permanence              45       200     22.50
+suite mean   Reference               48       200     24.00
+suite mean   Imitation               31       200     15.50
+average      16 tasks               226       800     28.25
